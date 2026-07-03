@@ -134,7 +134,7 @@ def generate_sql(question: str) -> str:
         FROM sales_detail s
         JOIN dealers d ON s.dealer_id = d.dealer_id
         WHERE s.sale_date LIKE '2024-06%'
-        GROUP BY s.dealer_name
+        GROUP BY s.dealer_id
         ORDER BY total_sales DESC
         LIMIT {limit}
         """
